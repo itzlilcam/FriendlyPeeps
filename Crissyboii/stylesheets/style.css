@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: url(/images/pexels-hristo-fidanov-1252869.jpg);
+}
+
+/* NAVIGATION */
+
+.logo img {
+    width: 55px;
+    height: auto;
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 90px;
+    align-items: center;
+}
+
+.fa-solid, .fa-brands {
+    color: white;
+    transition: 0.2s;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.fa-discord:hover {color: #5661ea; transition: 0.2s; cursor: pointer;}
+.fa-twitter:hover {color: #1d9bf0; transition: 0.2s; cursor: pointer;}
+.fa-sailboat:hover {color: #2081e2; transform: 0.2s; cursor: pointer;}
+
+.wallet-btn {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background: white;
+    color: #4894e0;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.wallet-btn:hover {
+    background-color: #4894e0;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.fa-link {display: none;}
+
+/* HEAD SECTION */
+
+.head-section {
+    text-align: center;
+    margin-top: 2%;
+}
+.head-section p {color: #c2c2c7;font-size: 19px;font-weight: 600;margin-bottom: 10px;}
+.head-section h1 {color: white;font-size: 46px;font-weight: 700;margin-bottom: 20px;}
+
+.join-discord-btn {
+    background: #3993fe;
+    padding: 25px 45px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.join-discord-btn:hover {cursor: pointer;background: #2c75cf;transition: 0.3s;}
+
+/* COUNTDOWN SECTION */
+
+section {
+    flex: 1 1 auto;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 7%;
+}
+  
+.countdown ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.countdown .clock-item {
+    list-style: none;
+    width: 90px;
+    height: auto;
+}
+
+.countdown .clock-item .count-number {
+    background: #3993fe;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 1rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    border-radius: 4px 4px 0 0;
+}
+
+.countdown .clock-item .count-text {
+    background: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1d4c85;
+    padding: 0.5rem 0.7rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    border-radius: 0 0 4px 4px;
+}
+  
+.countdown p {
+    color: #c2c2c7;
+    font-size: 1.1rem;
+    margin-bottom: 1.3rem;
+    text-align: center;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 850px) {
+    nav {justify-content: space-between;}
+    .head-section {margin-top: 5%;}
+    .head-section p {font-size: 17px;}
+    .head-section h1 {font-size: 40px;}
+    .countdown ul {gap: 1.5rem;padding: 20px;margin-top: 0%;}
+    .join-discord-btn {padding: 20px 35px; font-size: 15px;}
+    .wallet-btn {padding: 10px 20px; font-size: 14px;}
+    .fa-solid, .fa-brands {font-size: 17px; padding: 12px;}
+}
+
+@media screen and (max-width: 550px) {
+    nav {justify-content: space-between;}
+    #connectWallet {display: none;}
+    .head-section {margin-top: 2%;}
+    .head-section p {font-size: 15px;}
+    .head-section h1 {font-size: 30px;}
+    .countdown ul {gap: 1rem;padding: 17px;margin-top: 10%;}
+    .join-discord-btn {padding: 15px 30px; font-size: 12px;}
+    .countdown .clock-item {width: 70px;}
+    .fa-link {display: block;}
+}
